@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "compile": "node ./compile",
+    "compile": "ts-node ./compile",
     "test": "mocha"
   },
   "author": "",
@@ -14,12 +14,17 @@
     "fs-extra": "^11.1.1",
     "ganache": "7.9.1",
     "mocha": "10.2.0",
+    "nodemon": "^3.0.1",
     "solc": "0.8.19",
+    "typescript": "^5.2.2",
     "web3": "4.1.2"
   },
   "directories": {
     "test": "test"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.2"
+  }
 }
