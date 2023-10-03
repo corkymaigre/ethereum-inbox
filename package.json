@@ -4,20 +4,19 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "compile": "ts-node ./compile",
-    "test": "mocha"
+    "compile": "ts-node ./src/scripts/compile",
+    "coverage": "jest --coverage",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "2.1.15",
-    "fs-extra": "^11.1.1",
     "ganache": "7.9.1",
-    "mocha": "10.2.0",
     "nodemon": "^3.0.1",
     "solc": "0.8.19",
-    "typescript": "^5.2.2",
-    "web3": "4.1.2"
+    "web3": "4.1.2",
+    "web3-core-promievent": "^1.10.0"
   },
   "directories": {
     "test": "test"
@@ -25,6 +24,17 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "@types/fs-extra": "^11.0.2"
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-typescript": "^7.21.5",
+    "@types/fs-extra": "^11.0.2",
+    "@types/jest": "^29.5.2",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.2.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest"
+    }
   }
 }

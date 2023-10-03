@@ -13,6 +13,6 @@
       "*": ["./src/lib/solc/*"]
     }
   },
-  "include": ["."],
+  "include": ["./src"],
   "exclude": ["**/*.spec.ts", "node_modules", "./src/lib/solc"]
 }

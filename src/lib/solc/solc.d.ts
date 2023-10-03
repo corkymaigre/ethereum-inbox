@@ -3,7 +3,7 @@ declare module "solc" {
     inputs: any[];
     name: string;
     outputs: any[];
-    stateMutability: string;
+    stateMutability: "view" | "nonpayable";
     type: string;
   }
 
@@ -87,11 +87,7 @@ declare module "solc" {
       };
     };
     settings: {
-      outputSelection: {
-        "*": {
-          "*": ["*"];
-        };
-      };
+      outputSelection: { [key: string]: { [key: string]: string[] } };
     };
   }
 
